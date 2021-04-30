@@ -9,7 +9,7 @@
 */
 
 var settings = {
-    'radio_name': 'Brasil Hits',
+    'radio_name': 'SoundWorks Radio',
 
     // URL of streaming without / on the final, eg: http://streaming.com:8080
     'url_streaming': 'https://soundworks.live/radio/8000/radio',
