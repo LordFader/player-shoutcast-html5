@@ -12,7 +12,7 @@ var settings = {
     'radio_name': 'SoundWorks Radio',
 
     // URL of streaming without / on the final, eg: http://streaming.com:8080
-    'url_streaming': 'https://soundworks.live/radio/8000/radio',
+    'url_streaming': 'https://soundworks.live:8000/radio',
 
     // When choosing icecast, make sure the file 'player.log' in the document root is writeable.
     // Choose between 'shoutcast' or 'icecast'
