@@ -28,6 +28,7 @@ const API_KEY = settings.api_key;
 const HISTORIC = settings.historic;
 const NEXT_SONG = settings.next_song;
 const DEFAULT_COVER_ART = settings.default_cover_art;
+const STREAMPATH = settings.stream_path;
 
 window.onload = function () {
     var page = new Page;
@@ -242,7 +243,7 @@ function Page() {
     }
 }
 
-var audio = new Audio(URL_STREAMING);
+var audio = new Audio(URL_STREAMING+ STREAMPATH);
 
 // Player control
 function Player() {
