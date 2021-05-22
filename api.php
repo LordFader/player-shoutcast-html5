@@ -13,7 +13,7 @@ $historic = filter_input(INPUT_GET, 'historic', FILTER_VALIDATE_BOOLEAN);
 $streamingType = filter_input(INPUT_GET, 'streamtype', FILTER_SANITIZE_STRING);
 
 if(!empty($url)) {
-	if($streamingType === 'shoutcast') {
+	if($streamingType === 'icecast') {
 		if($historic) {
 			$urls[] = $url . '/7.html';
 			$urls[] = $url . '/played';
