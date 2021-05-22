@@ -21,6 +21,15 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+const RADIO_NAME = settings.radio_name;
+const URL_STREAMING = settings.url_streaming;
+const STREAMING_TYPE = settings.streaming_type;
+const STREAMPATH = settings.stream_path;
+const API_KEY = settings.api_key;
+const HISTORIC = settings.historic;
+const NEXT_SONG = settings.next_song;
+const DEFAULT_COVER_ART = settings.default_cover_art;
+
 window.onload = function () {
     var page = new Page;
     page.changeTitlePage();
@@ -234,12 +243,12 @@ function Page() {
     }
 }
 
-var audio = new Audio(URL_STREAMING);
+var audio = new Audio(URL_STREAMING + STREAMPATH );
 
 // Player control
 function Player() {
-    this.play = function () {
-        audio.play();
+    this.play = async function () {
+        await audio.play();
 
         var defaultVolume = document.getElementById('volume').value;
 
@@ -356,19 +365,21 @@ function getStreamingData() {
 
             var page = new Page();
 
-            var currentSongElement = document.getElementById('currentSong');
+            var currentSongElement = document.getElementById('currentSong').innerHTML.replace(/&apos;/g, '\'');
+            let currentSongEl = currentSongElement.replace(/&amp;/g, '&');
 
             // Formating characters to UTF-8
             let song = data.currentSong.replace(/&apos;/g, '\'');
-            currentSong = song.replace(/&amp;/g, '&');
+            let currentSong = song.replace(/&amp;/g, '&');
 
             let artist = data.currentArtist.replace(/&apos;/g, '\'');
-            currentArtist = artist.replace(/&amp;/g, '&');
-
+            let currentArtist = artist.replace(/&amp;/g, '&');
+            currentArtist = currentArtist.replace('  ', ' '); 
+            
             // Change the title
             document.title = currentSong + ' - ' + currentArtist + ' | ' + RADIO_NAME;
 
-            if (currentSongElement.innerText !== song.trim()) {
+            if (currentSongEl.trim() !== currentSong.trim()) {
                 page.refreshCover(currentSong, currentArtist);
                 page.refreshCurrentSong(currentSong, currentArtist);
                 page.refreshLyric(currentSong, currentArtist);
