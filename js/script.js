@@ -24,7 +24,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 const RADIO_NAME = settings.radio_name;
 const URL_STREAMING = settings.url_streaming;
 const STREAMING_TYPE = settings.streaming_type;
-const STREAMPATH = settings.stream_path;
 const API_KEY = settings.api_key;
 const HISTORIC = settings.historic;
 const NEXT_SONG = settings.next_song;
@@ -243,7 +242,7 @@ function Page() {
     }
 }
 
-var audio = new Audio(URL_STREAMING + STREAMPATH);
+var audio = new Audio(URL_STREAMING);
 
 // Player control
 function Player() {
