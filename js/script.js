@@ -243,7 +243,7 @@ function Page() {
     }
 }
 
-var audio = new Audio(URL_STREAMING + STREAMPATH );
+var audio = new Audio(URL_STREAMING + STREAMPATH);
 
 // Player control
 function Player() {
