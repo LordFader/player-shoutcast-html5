@@ -1,22 +1,23 @@
+
 $(document).ready(function() {
     $("#headerLiveHolder").airtimeLiveInfo({
-        sourceDomain: "http://radio.soundworks.live",
+        sourceDomain: "https://radio.soundworks.live",
         text: {onAirNow:"On Air Now", offline:"Offline", current:"Current", next:"Next"},
         updatePeriod: 20 //seconds
     });
     $("#headerLiveTrackHolder").airtimeLiveTrackInfo({
-        sourceDomain: "http://radio.soundworks.live",
+        sourceDomain: "https://radio.soundworks.live",
         text: {onAirNow:"On Air Now", offline:"Offline", current:"Current", next:"Next"},
         updatePeriod: 20 //seconds
     });
     $("#onAirToday").airtimeShowSchedule({
-        sourceDomain: "http://radio.soundworks.live",
+        sourceDomain: "https://radio.soundworks.live",
         text: {onAirToday:"On air today"},
         updatePeriod: 5, //seconds
         showLimit: 10
     });
     $("#scheduleTabs").airtimeWeekSchedule({
-        sourceDomain:"http://radio.soundworks.live",
+        sourceDomain:"https://radio.soundworks.live",
         dowText:{monday:"Monday", tuesday:"Tuesday", wednesday:"Wednesday", thursday:"Thursday", friday:"Friday", saturday:"Saturday", sunday:"Sunday", nextmonday:"Next Monday", nexttuesday:"Next Tuesday",nextwednesday:"Next Wednesday", nextthursday:"Next Thursday",nextfriday:"Next Friday", nextsaturday:"Next Saturday", nextsunday:"NextSunday"},
         miscText:{time:"Time", programName:"Program Name", details:"Details", readMore:"Read More"},
         updatePeriod: 600 //seconds

@@ -5,7 +5,7 @@
 
     var defaults = {
         updatePeriod: 20, //seconds
-        sourceDomain: "http://radio.soundworks.live", //where to get show status from
+        sourceDomain: "https://radio.soundworks.live", //where to get show status from
         text: {onAirToday:"On air today"},
         showLimit: 5
     };
@@ -75,7 +75,7 @@
 
     var defaults = {
         updatePeriod: 5, //seconds
-        sourceDomain: "http://radio.soundworks.live", //where to get show status from
+        sourceDomain: "https://radio.soundworks.live", //where to get show status from
         text: {onAirNow:"On Air Now", offline:"Offline", current:"Current", next:"Next"}
     };
     options = $.extend(true, defaults, options);    
@@ -157,7 +157,7 @@
 
        var defaults = {
            updatePeriod: 5, //seconds
-           sourceDomain: "http://radio.soundworks.live", //where to get show status from
+           sourceDomain: "https://radio.soundworks.live", //where to get show status from
            text: {onAirNow:"On Air Now", offline:"Offline", current:"Current", next:"Next"}
        };
        options = $.extend(true, defaults, options);    
@@ -236,7 +236,7 @@
  $.fn.airtimeWeekSchedule = function(options) {
 
     var defaults = {
-        sourceDomain: "http://radio.soundworks.live", //where to get show status from
+        sourceDomain: "https://radio.soundworks.live", //where to get show status from
         updatePeriod: 600,
         dowText:{monday:"Monday", tuesday:"Tuesday", wednesday:"Wednesday",thursday:"Thursday", friday:"Friday", saturday:"Saturday",sunday:"Sunday", nextmonday:"Next Monday", nexttuesday:"Next Tuesday",nextwednesday:"Next Wednesday", nextthursday:"Next Thursday",nextfriday:"Next Friday", nextsaturday:"Next Saturday", nextsunday:"NextSunday"},
         miscText: {time:"Time", programName:"Program Name", details:"Details", readMore:"Read More"}

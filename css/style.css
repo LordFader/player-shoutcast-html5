@@ -1,24 +1,15 @@
 @charset 'utf-8';
-
 @import url('https://fonts.googleapis.com/css?family=Share:400i,700i');
 @import url('bootstrap.min.css');
 
-html,
-body {
+html, body {
     height: 100%;
 }
 
 body {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-flow: row;
+    justify-content: center;
     overflow-x: hidden;
 }
 
@@ -26,11 +17,9 @@ body {
     min-width: 100%;
     min-height: 100%;
     position: fixed;
-    background: url('../img/record.gif') no-repeat;
+    background: url('../img/background.jpg') no-repeat;
     background-position: center;
     background-size: cover;
-    -webkit-transition: background-image 1s;
-    -o-transition: background-image 1s;
     transition: background-image 1s;
     background-position: center;
     background-attachment: fixed;
@@ -42,8 +31,6 @@ body {
     position: absolute;
     background-position: center;
     background-size: cover;
-    -webkit-transition: background-image 1s;
-    -o-transition: background-image 1s;
     transition: background-image 1s;
     background-position: center;
     background-attachment: fixed;
@@ -54,38 +41,32 @@ body {
     min-width: 100%;
     min-height: 100%;
     position: absolute;
-    background: -webkit-radial-gradient(rgba(0, 0, 0, .5) 20%, #000 85%);
-    background: -o-radial-gradient(rgba(0, 0, 0, .5) 20%, #000 85%);
     background: radial-gradient(rgba(0, 0, 0, .5) 20%, #000 85%);
     z-index: 2;
-    display: block;
 }
 
 .web-player {
     height: 100%;
-    color: #a20808ff;
+    color: #fff;
     padding: 5px;
     position: relative;
     z-index: 3;
-    margin-top: 2px;
+    margin-top: 25px;
 }
 
 .cover-album {
-    max-width: 100%;
+    max-width: 80%;
     margin: auto;
     background: url('../img/bg-capa.jpg') no-repeat;
     background-size: cover;
     border: 1px solid #383838;
-    -webkit-box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.4);
-            box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.4);
-    -webkit-transition: background-image 1s;
-    -o-transition: background-image 1s;
+    box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.4);
     transition: background-image 1s;
     margin-bottom: 15px;
 }
 
 .watermark {
-    width: 35px;
+    width: 89px;
     height: 35px;
     background: url(../img/logo.png) no-repeat;
     background-size: auto 35px;
@@ -102,8 +83,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-transition: background-image 1s;
-    -o-transition: background-image 1s;
     transition: background-image 1s;
 }
 
@@ -118,16 +97,12 @@ body {
 
 .info-current-song h2 {
     font-size: 22px;
-    font-family: kingthings_trypewriter_2Rg;
     font-weight: 700;
-    color: #ffffff;
 }
 
 .info-current-song h3 {
-    /* font-size: 18px */
+    font-size: 18px;
     font-weight: 400;
-    font-family: kingthings_trypewriter_2Rg;
-    color: #ffffff;
 }
 
 .play-pause {
@@ -145,18 +120,10 @@ body {
 
 .volume-slide {
     line-height: 35px;
-	color: #a20808ff;
-}
-
-#volume {
-	color: #a20808ff;
 }
 
 .volume-control {
     display: none;
-	font-family: digital-7regular;
-	font-weight: bold;
-	color: #a20808ff;
 }
 
 .vagalume a {
@@ -171,8 +138,6 @@ body {
     font-size: 1em;
     font-weight: 400;
     outline: none;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -212,14 +177,12 @@ input[type=range]::-webkit-slider-runnable-track {
     height: 5px;
     cursor: pointer;
     animate: 0.2s;
-    -webkit-box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     background: #fff;
 }
 
 input[type=range]::-webkit-slider-thumb {
-    -webkit-box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -284,14 +247,14 @@ input[type=range]::-ms-thumb {
     cursor: pointer;
 }
 
+
 .historic h2 {
     color: #fff;
-    font-family: impact_label_reversedregular;
     border-bottom: 2px solid #fff;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .historic article {
@@ -299,24 +262,20 @@ input[type=range]::-ms-thumb {
 }
 
 .historic .cover-historic {
-    width: 50px;
-    height: 50px;
+    width: 95px;
+    height: 95px;
     margin-right: 15px;
-    margin-left: 15px;
     float: left;
     background: url('../img/bg-capa.jpg') no-repeat;
     background-size: cover;
     border: 1px solid #383838;
-    -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
-            box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
-    -webkit-transition: background-image 1s;
-    -o-transition: background-image 1s;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-image 1s;
 }
 
 .historic .music-info {
     color: #fff;
-    font-family: kingthings_trypewriter_2Rg;
+    font-family: 'Share', sans-serif;
 }
 
 .historic .music-info .song {
@@ -327,16 +286,14 @@ input[type=range]::-ms-thumb {
     margin-bottom: -5px;
 }
 
-@media (max-width: 370px) {
+@media(max-width: 370px) {
     .cover-album {
         max-width: 100%;
     }
 }
 
-@media (min-width: 576px) {
+@media(min-width: 576px) {
     .volume-control {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
     }
 
@@ -345,11 +302,9 @@ input[type=range]::-ms-thumb {
     }
 }
 
-@media (min-width: 768px) {
+@media(min-width: 768px) {
     body {
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        align-items: center;
     }
 
     .h1-logo {
@@ -382,7 +337,7 @@ input[type=range]::-ms-thumb {
     }
 
     .info-current-song {
-        margin-top: 4px;
+        margin-top: 50px;
         text-align: left;
     }
 
